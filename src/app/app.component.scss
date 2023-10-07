@@ -1,0 +1,12 @@
+
+
+.header-toolbar {
+  background-color: #db7972; // main-color: TBD
+  height: 64px;
+  color: white;
+  font-weight: bold;
+
+  .toolbar-spacer {
+    flex: 1 1 auto;
+  }
+}
