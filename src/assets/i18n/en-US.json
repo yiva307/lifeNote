@@ -1,0 +1,27 @@
+{
+  "general": {
+    "lifeNote": "Life Note",
+    "setting": "Setting",
+    "login": "Login"
+  },
+  "menu":{
+    "dashboard": "HOME",
+    "spending": "SPENDING",
+    "note": "NOTE",
+    "tracking": "TRACKING"
+  },
+  "pages": {
+    "dashboard": {
+      "dashboard": "Dashboard"
+    },
+    "spending": {
+      "spending": "Spending"
+    },
+    "note": {
+      "note": "Note"
+    },
+    "tracking": {
+      "tracking": "Tracking"
+    }
+  }
+}

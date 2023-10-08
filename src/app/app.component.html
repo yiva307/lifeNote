@@ -1,9 +1,29 @@
 <mat-toolbar class="header-toolbar">
-  <button mat-icon-button><mat-icon>menu</mat-icon></button>
+  <button mat-icon-button (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
   <span>{{ title }}</span>
   <span class="toolbar-spacer"></span>
   <button mat-icon-button><mat-icon>favorite</mat-icon></button>
   <button mat-icon-button><mat-icon>more_vert</mat-icon></button>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav class="app-sidenav" [opened]="isNavOpened" mode="side">
+    <a class="menu-link" *ngFor="let node of menuData; let i=index"
+      routerLink="{{ node.href }}" routerLinkActive="active-link">
+        <mat-icon class="menu-icon"
+        matTooltip="{{ 'menu.' + node.key | translate }}">
+          {{ node.matIcon }}
+        </mat-icon>
+        <div class="menu-name">{{ 'menu.'+ node.key | translate }}</div>
+    </a>
+  </mat-sidenav>
+  <mat-sidenav-content id="sidenav-content">
+    <div id="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

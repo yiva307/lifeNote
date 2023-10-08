@@ -1,12 +1,45 @@
-
-
 .header-toolbar {
-  background-color: #db7972; // main-color: TBD
+  background-color: #a69e9e; // main-color: TBD
   height: 64px;
   color: white;
   font-weight: bold;
 
   .toolbar-spacer {
     flex: 1 1 auto;
+  }
+}
+
+
+.app-sidenav {
+  width: 180px;
+  background-color: #ffffff;
+
+  .menu-link {
+    display: flex; /* 彈性盒模型（Flexible Box Model）-> 彈性盒子（flex container）*/
+    flex-direction: row; /* 指定主軸（Main Axis）的方向 */
+
+    height: 40px;
+    padding: 8px;
+    color: #a69e9e;
+    text-decoration: none;
+
+    .menu-icon {
+      padding: 8px;
+    }
+
+    .menu-name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 40px;
+    }
+  }
+}
+
+#sidenav-content {
+  height: calc(100vh - 64px);
+
+  #page-content {
+    height: calc(100vh - 64px);
+    background-color: #e6e6e4;
   }
 }
