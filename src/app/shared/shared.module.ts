@@ -5,6 +5,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatCardModule } from '@angular/material/card';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -17,6 +20,9 @@ import { TranslateModule } from '@ngx-translate/core';
     MatButtonModule,
     MatSidenavModule,
     MatTooltipModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
     TranslateModule
   ],
   exports: [
@@ -25,6 +31,9 @@ import { TranslateModule } from '@ngx-translate/core';
     MatButtonModule,
     MatSidenavModule,
     MatTooltipModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
     TranslateModule
   ]
 })

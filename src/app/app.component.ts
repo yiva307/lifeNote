@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Life Note';
   isNavOpened: boolean = false;
+  isHomePage = true;
   menuData = [
     {
       id: '1',
-      key: 'dashboard',
-      href: '/dashboard',
-      matIcon: 'dashboard',
+      key: 'home',
+      href: '/home',
+      matIcon: 'home',
       isTopLevel: true
     },
     {

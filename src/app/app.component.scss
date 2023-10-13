@@ -19,7 +19,8 @@
     flex-direction: row; /* 指定主軸（Main Axis）的方向 */
 
     height: 40px;
-    padding: 8px;
+    padding: 12px;
+    margin-left: 8px;
     color: #a69e9e;
     text-decoration: none;
 
@@ -28,8 +29,8 @@
     }
 
     .menu-name {
-      font-weight: 600;
-      font-size: 16px;
+      font-weight: 500;
+      font-size: 18px;
       line-height: 40px;
     }
   }
@@ -37,9 +38,21 @@
 
 #sidenav-content {
   height: calc(100vh - 64px);
+  background-color: #e6e6e4;
+  display: flex;
+  justify-content: center;
 
   #page-content {
-    height: calc(100vh - 64px);
-    background-color: #e6e6e4;
+    min-height: calc(100vh - 64px);
+    width: calc(70vw);
+  }
+}
+
+@media screen and (max-width: 976px){
+  #sidenav-content{
+    #page-content {
+      min-height: calc(100vh - 64px);
+      width: calc(100vw);
+    }
   }
 }
