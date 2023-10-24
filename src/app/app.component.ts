@@ -12,8 +12,8 @@ export class AppComponent {
   menuData = [
     {
       id: '1',
-      key: 'home',
-      href: '/home',
+      key: 'dashboard',
+      href: '/dashboard',
       matIcon: 'home',
       isTopLevel: true
     },

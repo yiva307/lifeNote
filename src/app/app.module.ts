@@ -12,10 +12,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
-import { HomeComponent } from './home/home.component';
 import { adapterFactory } from 'angular-calendar/date-adapters/moment';
 import * as moment from 'moment';
 import { TrackingComponent } from './tracking/tracking.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -39,7 +39,7 @@ export function appInitializerFactory(translate: TranslateService, injector: Inj
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, TrackingComponent],
+  declarations: [AppComponent, TrackingComponent, DashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
