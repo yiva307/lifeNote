@@ -8,11 +8,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { TranslateModule } from '@ngx-translate/core';
 
+import { LoaderComponent } from './loader/loader.component';
+
+
 @NgModule({
-  declarations: [],
+  declarations: [LoaderComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -23,7 +27,8 @@ import { TranslateModule } from '@ngx-translate/core';
     MatCardModule,
     MatDatepickerModule,
     MatMomentDateModule,
-    TranslateModule
+    TranslateModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatToolbarModule,
@@ -34,7 +39,9 @@ import { TranslateModule } from '@ngx-translate/core';
     MatCardModule,
     MatDatepickerModule,
     MatMomentDateModule,
-    TranslateModule
+    TranslateModule,
+    MatProgressSpinnerModule,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

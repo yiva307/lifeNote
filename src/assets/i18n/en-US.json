@@ -5,14 +5,14 @@
     "login": "Login"
   },
   "menu":{
-    "home": "HOME",
+    "dashboard": "DASHBOARD",
     "spending": "SPENDING",
     "note": "NOTE",
     "tracking": "TRACKING"
   },
   "pages": {
-    "home": {
-      "home": "home"
+    "dashboard": {
+      "dashboard": "dashboard"
     },
     "spending": {
       "spending": "Spending"
