@@ -17,6 +17,7 @@ import { LoaderService } from './shared/loader/loader.service';
 import * as moment from 'moment';
 import { TrackingComponent } from './tracking/tracking.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PagesComponent } from './pages/pages.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -40,7 +41,7 @@ export function appInitializerFactory(translate: TranslateService, injector: Inj
 }
 
 @NgModule({
-  declarations: [AppComponent, TrackingComponent, DashboardComponent],
+  declarations: [AppComponent, TrackingComponent, DashboardComponent, PagesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
