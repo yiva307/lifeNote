@@ -9,7 +9,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav class="app-sidenav" [opened]="isNavOpened" mode="side" routerLinkActive="selected">
+  <mat-sidenav class="app-sidenav" [opened]="isNavOpened" mode="over" routerLinkActive="selected">
     <a class="menu-link" *ngFor="let node of menuData; let i=index"
       routerLink="{{ node.href }}">
         <mat-icon class="menu-icon"
@@ -20,6 +20,15 @@
     </a>
   </mat-sidenav>
   <mat-sidenav-content id="sidenav-content">
+    <!-- <div class="example-button-row" *ngFor="let node of menuData">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button mat-fab color="gray" aria-label="Example icon button with a delete icon">
+            <mat-icon>{{ node.matIcon }}</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div> -->
     <div id="page-content">
       <router-outlet></router-outlet>
     </div>

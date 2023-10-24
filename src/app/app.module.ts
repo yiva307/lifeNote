@@ -15,6 +15,7 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { adapterFactory } from 'angular-calendar/date-adapters/moment';
 import * as moment from 'moment';
+import { TrackingComponent } from './tracking/tracking.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -38,7 +39,7 @@ export function appInitializerFactory(translate: TranslateService, injector: Inj
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, TrackingComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

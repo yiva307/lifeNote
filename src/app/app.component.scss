@@ -12,7 +12,7 @@
 
 .app-sidenav {
   width: 180px;
-  background-color: #ffffff;
+  background-color: #e6e6e4;
 
   .menu-link {
     display: flex; /* 彈性盒模型（Flexible Box Model）-> 彈性盒子（flex container）*/
@@ -45,6 +45,7 @@
   #page-content {
     min-height: calc(100vh - 64px);
     width: calc(70vw);
+    padding-top: 20px;
   }
 }
 
