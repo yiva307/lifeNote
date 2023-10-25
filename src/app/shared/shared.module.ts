@@ -9,18 +9,24 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import * as moment from 'moment';
 
 import { TranslateModule } from '@ngx-translate/core';
 
 import { LoaderComponent } from './loader/loader.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/moment';
 
+export function momentAdapterFactory() {
+  return adapterFactory(moment);
+};
 
 @NgModule({
   declarations: [LoaderComponent],
   imports: [
     CommonModule,
-    MatToolbarModule,
     MatIconModule,
+    MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatTooltipModule,
@@ -28,7 +34,9 @@ import { LoaderComponent } from './loader/loader.component';
     MatDatepickerModule,
     MatMomentDateModule,
     TranslateModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    CalendarModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory })
   ],
   exports: [
     MatToolbarModule,
