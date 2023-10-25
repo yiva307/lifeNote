@@ -15,7 +15,7 @@ import { SharedModule } from './shared/shared.module';
 
 import { LoaderService } from './shared/loader/loader.service';
 import * as moment from 'moment';
-import { TrackingComponent } from './tracking/tracking.component';
+import { TrackingComponent } from './pages/tracking/tracking.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PagesComponent } from './pages/pages.component';
 
