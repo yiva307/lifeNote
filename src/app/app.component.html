@@ -20,6 +20,13 @@
     </a>
   </mat-sidenav>
   <mat-sidenav-content id="sidenav-content">
+
+    <div id="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
     <!-- <div class="example-button-row" *ngFor="let node of menuData">
       <div class="example-flex-container">
         <div class="example-button-container">
@@ -28,11 +35,7 @@
           </button>
         </div>
       </div>
-    </div> -->
-    <div id="page-content">
-      <router-outlet></router-outlet>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
 
-
+<router-outlet></router-outlet>
+<app-loader></app-loader> -->
