@@ -4,13 +4,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/moment';
+
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from '@shared/shared.module';
-import { LoaderService } from './shared/loader/loader.service';
+import { SharedModule } from './shared/shared.module';
 
+import { LoaderService } from './shared/loader/loader.service';
+import * as moment from 'moment';
+import { TrackingComponent } from './pages/tracking/tracking.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PagesComponent } from './pages/pages.component';
+
+export function momentAdapterFactory() {
+  return adapterFactory(moment);
+};
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,13 +41,14 @@ export function appInitializerFactory(translate: TranslateService, injector: Inj
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TrackingComponent, DashboardComponent, PagesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    CalendarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -44,6 +56,7 @@ export function appInitializerFactory(translate: TranslateService, injector: Inj
         deps: [HttpClient]
       }
     }),
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory })
   ],
   providers: [
     {

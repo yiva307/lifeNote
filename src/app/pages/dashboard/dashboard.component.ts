@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { LoaderService } from '../../shared/loader/loader.service';
+import { LoaderService } from '@shared/loader/loader.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +10,7 @@ import { LoaderService } from '../../shared/loader/loader.service';
 
 })
 export class DashboardComponent implements OnInit {
-  title = 'Life Note'
   currentDate = new Date();
-  isNavOpened: boolean = false;
 
   constructor(
     private _loaderService: LoaderService,
@@ -20,9 +18,5 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this._loaderService.show();
-  }
-
-  toggleMenu(): void {
-    this.isNavOpened = !this.isNavOpened;
   }
 }
