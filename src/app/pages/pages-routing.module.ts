@@ -12,6 +12,10 @@ export const routes: Routes = [
         path: 'dashboard',
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
       },
+      {
+        path: 'tracking',
+        loadChildren: () => import('./tracking/tracking.module').then(m => m.TrackingModule),
+      },
       { path: '**', redirectTo: 'dashboard' }
     ]
   }
