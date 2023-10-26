@@ -4,9 +4,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TrackingComponent } from './pages/tracking/tracking.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'tracking', component: TrackingComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: 'pages', redirectTo: 'pages' },
 ];
 
 @NgModule({

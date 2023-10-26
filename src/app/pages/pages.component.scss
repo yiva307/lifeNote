@@ -1,0 +1,59 @@
+.header-toolbar {
+  background-color: #a69e9e; // main-color: TBD
+  height: 64px;
+  color: white;
+  font-weight: bold;
+
+  .toolbar-spacer {
+    flex: 1 1 auto;
+  }
+}
+
+
+.app-sidenav {
+  width: 240px;
+  background-color: #e6e6e4;
+
+  .menu-link {
+    display: flex; /* 彈性盒模型（Flexible Box Model）-> 彈性盒子（flex container）*/
+    flex-direction: row; /* 指定主軸（Main Axis）的方向 */
+
+    height: 40px;
+    padding: 12px;
+    margin-left: 8px;
+    color: #a69e9e;
+    text-decoration: none;
+
+    .menu-icon {
+      padding: 8px;
+    }
+
+    .menu-name {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 40px;
+    }
+  }
+}
+
+#sidenav-content {
+  height: calc(100vh - 64px);
+  background-color: #e6e6e4;
+  display: flex;
+  justify-content: center;
+
+  #page-content {
+    min-height: calc(100vh - 64px);
+    width: calc(70vw);
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 976px){
+  #sidenav-content{
+    #page-content {
+      min-height: calc(100vh - 64px);
+      width: calc(100vw);
+    }
+  }
+}
