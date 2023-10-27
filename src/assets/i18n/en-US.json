@@ -29,8 +29,16 @@
     },
     "uiCmpt": {
       "uiCmpt": "UI Component",
-      "table": "Table",
-      "cards": "Cards"
+      "table": {
+        "title": "Table",
+        "name": "Name",
+        "status": "Status",
+        "dateline": "Dateline",
+        "description": "Description"
+      },
+      "cards": {
+        "title": "Cards"
+      }
     }
   }
 }

@@ -6,9 +6,13 @@ import { SharedModule } from '../../shared/shared.module';
 
 import { UiCmptRoutingModule } from './ui-cmpt-routing.module';
 import { UiCmptComponent } from './ui-cmpt.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
-  declarations: [UiCmptComponent],
+  declarations: [
+    UiCmptComponent,
+    TableComponent
+  ],
   imports: [CommonModule, UiCmptRoutingModule, GridsterModule, SharedModule ]
 })
 export class UiCmptModule {}

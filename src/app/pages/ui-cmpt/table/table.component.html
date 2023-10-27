@@ -1,0 +1,85 @@
+<div class="table-tool-bar" fxLayout="row">
+  <div fxLayout="row">
+    <button
+      *ngIf="selection.selected.length === 0"
+      (click)="createTableData()"
+      mat-icon-button
+      matTooltip="{{ 'general.table.add' | translate }}"
+      mat-icon-button>
+      <mat-icon> add </mat-icon>
+    </button>
+    <button
+      *ngIf="selection.selected.length > 0"
+      (click)="deleteTableData()"
+      matTooltip="{{ 'general.table.delete' | translate }}"
+      mat-icon-button>
+      <mat-icon> delete </mat-icon>
+    </button>
+    <button
+      (click)="getTableData()"
+      matTooltip="{{ 'general.table.refresh' | translate }}"
+      mat-icon-button >
+      <mat-icon> refresh </mat-icon>
+    </button>
+    <!-- <app-selected-chip
+      *ngIf="!readonly"
+      [selectedNum]="selection.selected.length"
+      [allNum]="tableSource.data.length"
+      (selectAll)="toggleSelectAll($event)"
+      (clearAll)="toggleSelectAll($event)"></app-selected-chip> -->
+  </div>
+  <mat-form-field class="table-search" fxFlex="25">
+    <mat-icon matPrefix>search</mat-icon>
+    <input #tableSearch matInput placeholder="{{ 'general.table.search' | translate }}" />
+  </mat-form-field>
+</div>
+<table class="table-cmpt" mat-table [dataSource]="tableSource" matSort>
+  <!-- Check Column -->
+  <ng-container matColumnDef="check">
+    <th *matHeaderCellDef mat-header-cell>
+      <mat-checkbox
+        [disabled]="tableSource.connect().value.length === 0"
+        [checked]="selection.hasValue() && isAllSelected()"
+        [indeterminate]="isSelectIndeterminate()"
+        (change)="$event ? toggleSelectAll() : null"
+        color="primary">
+      </mat-checkbox>
+    </th>
+    <td *matCellDef="let row" mat-cell>
+      <mat-checkbox
+        [checked]="selection.isSelected(row)"
+        (change)="$event ? selection.toggle(row) : null"
+        (click)="$event.stopPropagation()"
+        color="primary">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> {{ transPage + "name" | translate }} </th>
+    <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+  </ng-container>
+
+  <!-- Status Column -->
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef> {{ transPage + "status" | translate }} </th>
+    <td mat-cell *matCellDef="let element"> {{ element.status }} </td>
+  </ng-container>
+
+  <!-- Dateline Column -->
+  <ng-container matColumnDef="dateline">
+    <th mat-header-cell *matHeaderCellDef> {{ transPage + "dateline" | translate }} </th>
+    <td mat-cell *matCellDef="let element"> {{ element.dateline }} </td>
+  </ng-container>
+
+  <!-- Description Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef> {{ transPage + "description" | translate }} </th>
+    <td mat-cell *matCellDef="let element"> {{ element.description }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator class="table-paginator" [pageSizeOptions]="pageSizeOptions" showFirstLastButtons></mat-paginator>

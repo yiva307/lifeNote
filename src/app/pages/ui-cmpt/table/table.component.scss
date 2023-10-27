@@ -1,0 +1,23 @@
+div.table-tool-bar {
+  height: 56px;
+  margin-left: 12px;
+
+  .mat-form-field {
+    bottom: -6px !important;
+    display: block;
+    position: relative;
+    mat-icon {
+      bottom: -6px;
+      position: relative;
+    }
+  }
+  .mat-icon-button {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+.table-tool-bar, .table-cmpt , .table-paginator{
+  background-color: #e6e6e4;
+}
