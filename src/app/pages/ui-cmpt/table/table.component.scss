@@ -1,3 +1,5 @@
+@import '../../../shared/scss/color.scss';
+
 div.table-tool-bar {
   height: 56px;
   margin-left: 12px;
@@ -19,5 +21,5 @@ div.table-tool-bar {
 }
 
 .table-tool-bar, .table-cmpt , .table-paginator{
-  background-color: #e6e6e4;
+  background-color: $background-color;
 }

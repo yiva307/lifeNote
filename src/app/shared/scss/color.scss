@@ -1,0 +1,37 @@
+/** theme color */
+$dark-theme-main: #3f2e6f;
+$light-theme-main: #6750A4;
+
+/** Core colors */
+// primary: Acts as custom source color. 一開始是用 #a69e9e 覺得也蠻好看的
+$primary-color: #958DA5;
+$primary-container: #E8DEF8;
+
+// secondary
+$secondary-color: #6750A4;
+$secondary-container: #e8dbff80; // #E9DDFF 50%
+
+// tertiary
+$tertiary-color: #B58392;
+$tertiary-container:#FFD8E4;
+
+$neutral-color: #939094;
+
+/** Error colors */
+$error: #B3261E;
+$error-container: #F9DEDC;
+
+/** Grey */
+$white: #fffdfa;      // 99%
+$light-grey: #f5f5f5; // 93% background color
+$ash-grey: #BDBDBD;   // 74%
+$slate-grey: #757575; // 46%
+$dark-grey: #4A4A4A;  // 29%
+$black: #212121;      // 13%
+
+// default theme
+$background-color: $light-grey;
+$top-nav-bg-color: $primary-color;
+$sidemenu-right-bg-color: $white;
+$sidemenu-left-bg-color: $dark-grey;
+$sidemenu-text-color: $black;
