@@ -26,6 +26,11 @@
     "tracking": {
       "tracking": "Tracking",
       "toDoTasks": "To Do Tasks"
+    },
+    "uiCmpt": {
+      "uiCmpt": "UI Component",
+      "table": "Table",
+      "cards": "Cards"
     }
   }
 }

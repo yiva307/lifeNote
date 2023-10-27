@@ -16,7 +16,11 @@ export const routes: Routes = [
         path: 'tracking',
         loadChildren: () => import('./tracking/tracking.module').then(m => m.TrackingModule),
       },
-      { path: '**', redirectTo: 'dashboard' }
+      {
+        path: 'ui-cmpt',
+        loadChildren: () => import('./ui-cmpt/ui-cmpt.module').then(m => m.UiCmptModule),
+      },
+      { path: '**', redirectTo: 'ui-cmpt' }
     ]
   }
 ];

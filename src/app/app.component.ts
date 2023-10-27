@@ -38,6 +38,13 @@ export class AppComponent {
       matIcon: 'apple',
       isTopLevel: true
     },
+    {
+      id: '4',
+      key: 'ui-cmpt',
+      href: '/ui-cmpt',
+      matIcon: 'paint',
+      isTopLevel: true
+    },
   ]
 
   toggleMenu(): void {
