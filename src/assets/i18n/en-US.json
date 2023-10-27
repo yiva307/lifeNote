@@ -2,7 +2,10 @@
   "general": {
     "lifeNote": "Life Note",
     "setting": "Setting",
-    "login": "Login"
+    "login": "Login",
+    "table": {
+      "search": "Search"
+    }
   },
   "menu":{
     "dashboard": "DASHBOARD",
@@ -21,7 +24,8 @@
       "note": "Note"
     },
     "tracking": {
-      "tracking": "Tracking"
+      "tracking": "Tracking",
+      "toDoTasks": "To Do Tasks"
     }
   }
 }
