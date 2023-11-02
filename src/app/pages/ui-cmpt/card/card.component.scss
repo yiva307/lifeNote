@@ -1,0 +1,8 @@
+@import '../../../shared/scss/color.scss';
+
+.card-style {
+  margin: 20px;
+  background-color: $secondary-container;
+  box-shadow: none;
+  border-radius: 30px;
+}

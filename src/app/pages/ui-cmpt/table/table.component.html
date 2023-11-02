@@ -1,4 +1,5 @@
 <div class="table-tool-bar" fxLayout="row">
+  <!-- Tool Btns -->
   <div fxLayout="row">
     <button
       *ngIf="selection.selected.length === 0"
@@ -28,6 +29,7 @@
       (selectAll)="toggleSelectAll($event)"
       (clearAll)="toggleSelectAll($event)"></app-selected-chip> -->
   </div>
+  <!-- Search Bar -->
   <mat-form-field class="table-search" fxFlex="25">
     <mat-icon matPrefix>search</mat-icon>
     <input #tableSearch matInput placeholder="{{ 'general.table.search' | translate }}" />

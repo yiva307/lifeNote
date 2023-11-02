@@ -1,12 +1,12 @@
 @import '../../../shared/scss/color.scss';
 
 div.table-tool-bar {
+  padding-top: 8px;
   height: 56px;
   margin-left: 12px;
 
-  .mat-form-field {
-    bottom: -6px !important;
-    display: block;
+  .table-search {
+    bottom: -6px;
     position: relative;
     mat-icon {
       bottom: -6px;
