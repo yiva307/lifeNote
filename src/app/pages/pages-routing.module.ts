@@ -20,7 +20,7 @@ export const routes: Routes = [
         path: 'ui-cmpt',
         loadChildren: () => import('./ui-cmpt/ui-cmpt.module').then(m => m.UiCmptModule),
       },
-      { path: '**', redirectTo: 'ui-cmpt' }
+      { path: '**', redirectTo: 'dashboard' }
     ]
   }
 ];

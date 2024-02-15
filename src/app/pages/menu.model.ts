@@ -8,23 +8,31 @@ export const menuData = [
   },
   {
     id: '2',
-    key: 'spending',
-    href: '/pages/spending',
-    matIcon: 'cake',
+    key: 'tracking',
+    href: '/pages/tracking',
+    matIcon: 'task_alt',
     isTopLevel: true
   },
   {
     id: '3',
-    key: 'note',
-    href: '/pages/note',
-    matIcon: 'note',
+    key: 'ui-cmpt',
+    href: '/pages/ui-cmpt',
+    matIcon: 'interests',
     isTopLevel: true
   },
-  {
-    id: '4',
-    key: 'tracking',
-    href: '/pages/tracking',
-    matIcon: 'apple',
-    isTopLevel: true
-  },
+  // TODO: Add spending & Note pages
+  // {
+  //   id: '2',
+  //   key: 'spending',
+  //   href: '/pages/spending',
+  //   matIcon: 'request_quote',
+  //   isTopLevel: true
+  // },
+  // {
+  //   id: '3',
+  //   key: 'note',
+  //   href: '/pages/note',
+  //   matIcon: 'auto_stories',
+  //   isTopLevel: true
+  // },
 ]

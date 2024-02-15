@@ -11,7 +11,8 @@
     "dashboard": "DASHBOARD",
     "spending": "SPENDING",
     "note": "NOTE",
-    "tracking": "TRACKING"
+    "tracking": "TRACKING",
+    "ui-cmpt": "UI GUIDELINE"
   },
   "pages": {
     "dashboard": {
@@ -25,7 +26,9 @@
     },
     "tracking": {
       "tracking": "Tracking",
-      "toDoTasks": "To Do Tasks"
+      "toDoTasks": "To Do Tasks",
+      "habit": "Habit",
+      "projects": "Projects"
     },
     "uiCmpt": {
       "uiCmpt": "UI Component",

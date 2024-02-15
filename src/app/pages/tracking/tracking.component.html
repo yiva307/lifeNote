@@ -1,11 +1,9 @@
-<p>tracking works!</p>
-
+  <div class="page-title">{{ transPage + 'tracking' | translate }}</div>
 <mat-tab-group>
   <mat-tab label="{{ transPage + 'toDoTasks' | translate }}" position="-1">
     <button class="add-btn" mat-fab color="primary">
       <mat-icon>add</mat-icon>
     </button>
-
     <table mat-table [dataSource]="toDoListSource">
       <!-- Position Column -->
       <ng-container matColumnDef="checkbox">
